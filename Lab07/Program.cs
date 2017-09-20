@@ -10,6 +10,15 @@ namespace Lab07
     {
         static void Main(string[] args)
         {
+            var product = new List<string>() { "Shirts", "Shoes", "Pants", "Ties", "Hats", "Gloves", "Socks", "Wallets", "Purses", "Sunglasses" };
+            foreach(string item in product)
+            {
+                Console.WriteLine("Item: " + item) ;
+            }
+                Console.Read()
+
         }
+
+
     }
 }
