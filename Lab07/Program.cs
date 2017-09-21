@@ -10,15 +10,36 @@ namespace Lab07
     {
         static void Main(string[] args)
         {
-            var product = new List<string>() { "Shirts", "Shoes", "Pants", "Ties", "Hats", "Gloves", "Socks", "Wallets", "Purses", "Sunglasses" };
-            foreach(string item in product)
+            Store<Products> storeFront = new Store<Products>();
+
+            Products jacket = new Products("Northface");
+            Products pants = new Products("Levi");
+            Products shirt = new Products("Ralph Lauren");
+            Products hat = new Products("Kangoo");
+            Products shoes = new Products("Adidas");
+
+            storeFront.Add(jacket);
+            storeFront.Add(pants);
+            storeFront.Add(shirt);
+            storeFront.Add(hat);
+            storeFront.Add(shoes);
+
+            foreach(Products p in storeFront)
             {
-                Console.WriteLine("Item: " + item) ;
+                Console.WriteLine(p.Brand);
             }
-                Console.Read()
+            Console.WriteLine();
 
+            storeFront.Remove(shirt);
+
+            foreach(Products p in storeFront)
+            {
+                Console.WriteLine(p.Brand);
+            }
+
+
+            Console.Read();
         }
-
 
     }
 }
